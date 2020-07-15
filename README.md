@@ -115,7 +115,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [x] Submit a Pull-Request to merge Branch into `main` (student's Repository). (https://github.com/kc0buk/nasa-photo-of-the-day/pull/1)
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete by merging the branch back into `main` branch.
 - [ ] Do your magic!
