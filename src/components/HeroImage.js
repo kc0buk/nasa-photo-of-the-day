@@ -1,28 +1,42 @@
 import React from 'react'
+import { Container, Box } from '../styles/styles'
+import ImageDiv  from './ImageDiv'
 
 export default function HeroImage(props) {
-    const { apodData, apodDate } = props
+    const { apodData, apodDate, setDate } = props
 
     return (
-        <div className="container">
+        <Container direction='column'>
             <h1>NASA Astronomy Picture of the Day</h1>
-            <div className="heroImage">
-            <img src={apodData.url} />
-            </div>
-            <div className="detailsContainer">
-                <div className="description">
+            <ImageDiv url={apodData.url}>
+            </ImageDiv>
+            <Container justify='left' align='start'>
+                <Box width='80%'>
+                    <Box margin='0'>
                     <h2>{apodData.title}</h2>
+                    </Box>
+                    <Box margin='0'>
                     <p>{apodData.explanation}</p>
+                    </Box>
+                    <Box margin='0'>
                     <p className="copyright">
                     {
                         `Copyright: ${apodData.copyright}`
                     }
                         </p>
-                </div>
-                <div className="apodDate">
-                    <p>{`Published: ${apodDate}`}</p>
-                </div>
-            </div>
-      </div>
+                        </Box>
+                </Box>
+                <Container width='15%' direction='column'>
+                <Box>
+                    <p>Published:</p>
+                    <p>{apodDate}</p>
+                </Box>
+                <Box>
+                    <p>Get Another Date</p>
+                    <input type='date' onChange={e => setDate(e.target.value)}></input>
+                </Box>
+                </Container>
+            </Container>
+      </Container>
     )
 }
